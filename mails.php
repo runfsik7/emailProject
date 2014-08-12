@@ -14,15 +14,15 @@
 	if($exist == 1){
 		echo '1';
 	}else{
-		$file = 'mail_list_container.csv';
+		$file = 'mailContainer.csv';
 		$current = file_get_contents($file);
 		$current .= $email."\n";
 		file_put_contents($file, $current);
 		echo '0';
 		
 		$to = $email;
-		$subject = 'TheFutureTransport';
-		$from = 'info@TheFutureTransport.com';
+		$subject = 'Company Name';
+		$from = 'info@companyname.com';
 
 		$message ='<!DOCTYPE html">';
 		$message.='<html>';
@@ -45,7 +45,7 @@
 		$message.= "<p>We put final draws and soon will be launching finalised website.</p>";
 		$message.= "<p>Be the first to benefit from the wheel, by using our special <b>10% discount</b> for adventurers just like you. Simply mention XXXX code when you order it.</p>";
 		$message.= "<p>Stay tuned and we will provide more information soon.</p>";
-		$message.= "<p><i>Firstwheel team.</i></p>";
+		$message.= "<p><i>Company team.</i></p>";
 		$message.='</td>';
 		$message.='</tr>';
 		$message.='</table>';
